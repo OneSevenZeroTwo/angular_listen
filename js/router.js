@@ -16,20 +16,16 @@
 		}).state("index.artists",{
 			url:"/artists",
 			templateUrl:"template/artists.html"
-		})
-
-		
-//		.state("Detail",{
-//			url:"/Detail",
-//			templateUrl:"template/Detail.html"
-//		})
-		.state("index.album",{
+		}).state("index.album",{
 			url:"/album/:specialid",
 			templateUrl:"template/album.html"
 		})
 		.state("index.mv",{
 			url:"/mv",
 			templateUrl:"template/mv.html"
+		}).state("catelist",{
+			url:"/catelist/:type",
+			templateUrl:"template/catelist.html"
 		});
 
 		$urlRouterProvider.when("","/index/recommend")
