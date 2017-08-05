@@ -16,7 +16,18 @@
 		}).state("index.artists",{
 			url:"/artists",
 			templateUrl:"template/artists.html"
-		}).state("index.mv",{
+		})
+
+		
+//		.state("Detail",{
+//			url:"/Detail",
+//			templateUrl:"template/Detail.html"
+//		})
+		.state("index.album",{
+			url:"/album/:specialid",
+			templateUrl:"template/album.html"
+		})
+		.state("index.mv",{
 			url:"/mv",
 			templateUrl:"template/mv.html"
 		});
