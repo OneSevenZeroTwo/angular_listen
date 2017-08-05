@@ -2,21 +2,21 @@
 		<div class="cate">
 			<h4>热门分类</h4>
 			<div class="subcate">
-				<div class="nav"><a href="#/subcate/liuxing">流行</a></div>
+				<div class="nav"><a href="#!/catelist/8888">流行</a></div>
 				<div class="nav subnav">
-					<div class="treenav"><a href="#/subcate/minyao">民谣</a></div>
-					<div class="treenav"><a href="#/subcate/oumei">欧美金曲榜</a></div>
+					<div class="treenav"><a href="#!/catelist/28061">民谣</a></div>
+					<div class="treenav"><a href="#!/catelist/28">欧美金曲榜</a></div>
 				</div>
 				<div class="nav subnav">
-					<div class="treenav"><a href="#/subcate/wangluo">网络歌曲</a></div>
-					<div class="treenav"><a href="#/subcate/qingge">韩语</a></div>
+					<div class="treenav"><a href="#!/catelist/23784">网络歌曲</a></div>
+					<div class="treenav"><a href="#!/catelist/24045">韩语</a></div>
 				</div>
 			</div>
-			<div class="spend" v-show="isSpend">
+			<div class="spend" ng-show="isSpend">
 				<h4>全部分类</h4>
 				<div class="spendAll" >
 					<div class="bigCate">
-						<div class="subCate">
+						<div class="subCate">s
 							<h3>语种</h3>
 						</div>
 						<div class="subCate">
@@ -176,14 +176,6 @@
 		</div>
 		<div class="hot">
 			<h4>热门歌单</h4>
-			<div v-for="(n,$index) in hot">
-				<div>
-					<p>
-						<span class="keepplay"  @click="sethash(n.hash,n.remark,$index,n.filename)">{{n.filename|nomore}}</span>
-					</p>
-					<i class="love" @click="cllocet(n.filename,n.hash)"></i>		
-				</div>
-			</div>
 		</div>
 		<div class="player">
     		<ul class="action">
@@ -195,7 +187,7 @@
 	        	<li class="iconfont icon-list"></li>
     		</ul>
 		</div>
-		<div class="gong">
+		<div class="gong" ng-if=isShou>
 			<div class="haol">收藏成功</div>
 		</div>
 	</div>

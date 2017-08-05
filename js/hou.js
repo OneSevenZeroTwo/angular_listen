@@ -168,7 +168,7 @@ app.get("/xart",function(request,response){
 //流行歌曲请求
 app.get("/liuxing",function(request,response){
 	response.setHeader("Access-Control-Allow-Origin","*");
-	http.get("http://m.kugou.com/rank/info/?rankid="+request.query.type+"&page=1&json=true", function(res) {
+	http.get("http://m.kugou.com/rank/info/?rankid=6666&page=1&json=true", function(res) {
 		var data = "";
 		res.on('data', function(chunk) {
 			data += chunk
@@ -237,10 +237,10 @@ app.get("/bbbbb",function(request,response){
 })
 
 
-app.get("/ccccc",function(request,response){
+app.get("/catelist",function(request,response){
 	console.log(request.query.song)
 	response.setHeader("Access-Control-Allow-Origin","*");
-	http.get("http://m.kugou.com/rank/info/?rankid=28&page=1&json=true", function(res) {
+	http.get("http://m.kugou.com/rank/info/?rankid="+request.query.type+"&page=1&json=true", function(res) {
 		var data = "";
 		res.on('data', function(chunk) {
 			data += chunk

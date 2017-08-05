@@ -19,6 +19,9 @@
 		}).state("index.mv",{
 			url:"/mv",
 			templateUrl:"template/mv.html"
+		}).state("catelist",{
+			url:"/catelist/:type",
+			templateUrl:"template/catelist.html"
 		});
 
 		$urlRouterProvider.when("","/index/recommend")

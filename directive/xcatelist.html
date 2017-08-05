@@ -1,0 +1,14 @@
+<div>
+	<img ng-src="{{catelistpic}}" alt="">
+	<p class="catelist" ng-repeat="n in catelist">{{n.filename}}</p>
+</div>
+<style>
+	.catelist{
+		width: 100%;
+		height: 35px;
+		line-height: 35px;
+		overflow: hidden;
+		border-bottom: 1px solid pink;
+		padding-left: 10px
+	}
+</style>
