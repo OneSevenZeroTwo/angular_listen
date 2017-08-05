@@ -31,7 +31,7 @@
 								<img alt="薛之谦" ng-src="{{a.imgurl|change}}">
 							</div>
 							<div class="info">
-								<a href="#!/index/album/{{a.specialid}}"><div>{{a.specialname}}</div></a>
+								<a href="#!/index/album/{{a.specialid}}"><div ng-click="pic(a.imgurl)">{{a.specialname}}</div></a>
 							</div>
 						</li>
 						<!--<li class="load-more need-active" @click="loadMore()">查看更多...</li>-->

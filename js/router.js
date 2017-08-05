@@ -19,8 +19,7 @@
 		}).state("index.album",{
 			url:"/album/:specialid",
 			templateUrl:"template/album.html"
-		})
-		.state("index.mv",{
+		}).state("index.mv",{
 			url:"/mv",
 			templateUrl:"template/mv.html"
 		}).state("catelist",{

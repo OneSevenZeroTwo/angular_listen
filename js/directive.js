@@ -49,6 +49,7 @@
 				
 				//放歌	
 				scope.play = function(hash){
+					console.log(hash)
 			      $http({
 					method: "get",
 					params:{
@@ -78,6 +79,15 @@
 
 					scope.art = data.data.plist.list.info
 				})
+				
+				scope.pic = function(img){
+					console.log(img)
+					window.img = img
+					console.log(window.img)
+				}
+				console.log(window.img)
+				
+				
 			}
 		}
 	}]);
@@ -93,6 +103,7 @@
 		return {
 			templateUrl: "directive/xalbum.html",
 			link:function(scope,ele,attr){
+				scope.name;
 				console.log($state.params)
 				$http({
 					methods:"get",
@@ -101,11 +112,34 @@
 					},
 					url:"http://localhost:6789/detail",
 				}).then(function(data){
+					console.log(data.data.list.list.info)
+					scope.album = data.data.list.list.info
+				})	
+				scope.img;
+//			     scope.pic = function(img){
+				//	console.log(scope.img)
+//					scope.img = img
+//				}
+//				scope.pic()
+				//放歌
+				scope.Play = function(hash){
+					console.log(hash)
+			      $http({
+					method: "get",
+					params:{
+						song:hash
+					},
+					url: "http://localhost:6789/gethashsong",
+				    }).then(function(data) {
 					console.log(data)
-				})
+					scope.Music = data.data.url
+					console.log(scope.Music)
+				   })
+				}
 			}
 		}
 	}]);
+	
     directives.directive("xcate",["$http", function($http) {
         return {
             templateUrl: "directive/xcate.html",
